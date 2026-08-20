@@ -1,0 +1,17 @@
+/* Desktop composition refinements for the homepage and global navigation. */
+@media (min-width: 761px) {
+  .site-header {
+    justify-content: flex-end;
+    padding-right: max(32px, calc((100vw - 1380px) / 2));
+  }
+
+  .home-hero {
+    padding-bottom: clamp(120px, 16vh, 170px);
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    justify-content: flex-start;
+  }
+}
