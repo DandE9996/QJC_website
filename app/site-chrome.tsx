@@ -25,23 +25,23 @@ const scenes: Record<Scene["key"], Scene> = {
   },
   life: {
     key: "life",
-    image: "https://images.unsplash.com/photo-1783780163466-52762d104c8a?auto=format&fit=crop&w=3000&q=88",
-    position: "center 52%",
+    image: "https://images.unsplash.com/photo-1746310226998-30211d24b338?auto=format&fit=crop&w=3000&q=88",
+    position: "center 56%",
   },
   thoughts: {
     key: "thoughts",
-    image: "https://images.unsplash.com/photo-1781813745733-36af0d892101?auto=format&fit=crop&w=3000&q=88",
-    position: "center 45%",
+    image: "https://images.unsplash.com/photo-1749063798906-e09dde209143?auto=format&fit=crop&w=3000&q=88",
+    position: "center 48%",
   },
   work: {
     key: "work",
-    image: "https://images.unsplash.com/photo-1783588608994-1e2efa299061?auto=format&fit=crop&w=3000&q=88",
+    image: "https://images.unsplash.com/photo-1774112034535-f037b32b5884?auto=format&fit=crop&w=3000&q=88",
     position: "center 48%",
   },
   cv: {
     key: "cv",
-    image: "https://images.unsplash.com/photo-1762564048520-6638d810e548?auto=format&fit=crop&w=3000&q=88",
-    position: "center 44%",
+    image: "https://images.unsplash.com/photo-1761816336242-ddeec5263e93?auto=format&fit=crop&w=3000&q=88",
+    position: "center 46%",
   },
 };
 
