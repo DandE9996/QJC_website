@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
+import "./overrides.css";
 
 const displayFont = Cormorant_Garamond({
   subsets: ["latin"],
@@ -36,9 +37,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${displayFont.variable} ${sansFont.variable}`}>
         <div className="site-shell">
           <header className="site-header">
-            <Link className="site-name" href="/" aria-label="Juncheng Qian home">
-              JQ
-            </Link>
             <nav className="site-nav" aria-label="Primary navigation">
               {navigation.map((item) => (
                 <Link key={item.href} href={item.href}>
