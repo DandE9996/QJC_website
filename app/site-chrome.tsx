@@ -20,8 +20,8 @@ type Scene = {
 const scenes: Record<Scene["key"], Scene> = {
   home: {
     key: "home",
-    image: "https://images.unsplash.com/photo-1775155673179-1d2c6db2cc39?auto=format&fit=crop&w=3000&q=88",
-    position: "center 48%",
+    image: "https://images.unsplash.com/photo-1470115266183-2a0f4cf63cbc?auto=format&fit=crop&w=3000&q=88",
+    position: "center 50%",
   },
   life: {
     key: "life",
