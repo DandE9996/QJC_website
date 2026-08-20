@@ -13,8 +13,8 @@ const topics = [
 
 export default function ThoughtsPage() {
   return (
-    <>
-      <header className="page-header">
+    <div className="editorial-page">
+      <header className="editorial-hero">
         <p className="eyebrow">Thoughts</p>
         <h1>Notes, not a blog.</h1>
         <p className="page-intro">
@@ -22,16 +22,17 @@ export default function ThoughtsPage() {
         </p>
       </header>
 
-      <section className="section">
-        <div className="simple-list">
-          {topics.map(([title, description]) => (
-            <div className="simple-item" key={title}>
-              <h3>{title}</h3>
+      <section className="editorial-panel" aria-label="Thought topics">
+        <div className="index-list">
+          {topics.map(([title, description], index) => (
+            <article className="index-row" key={title}>
+              <span className="index-number">{String(index + 1).padStart(2, "0")}</span>
+              <h2>{title}</h2>
               <p>{description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
