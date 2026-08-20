@@ -37,11 +37,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </header>
 
           <main>{children}</main>
-
-          <footer className="site-footer">
-            <span>Juncheng Qian</span>
-            <span>Personal archive, research, and notes.</span>
-          </footer>
         </div>
       </body>
     </html>
