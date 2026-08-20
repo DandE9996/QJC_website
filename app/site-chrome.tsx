@@ -40,8 +40,8 @@ const scenes: Record<Scene["key"], Scene> = {
   },
   cv: {
     key: "cv",
-    image: "https://images.unsplash.com/photo-1773318435531-101e57047732?auto=format&fit=crop&w=3000&q=88",
-    position: "center 48%",
+    image: "https://images.unsplash.com/photo-1502252430442-aac78f397426?auto=format&fit=crop&w=3000&q=88",
+    position: "center 45%",
   },
 };
 
