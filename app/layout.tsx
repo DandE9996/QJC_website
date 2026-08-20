@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
+
+const displayFont = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-display",
+});
+
+const sansFont = Manrope({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +33,7 @@ const navigation = [
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${displayFont.variable} ${sansFont.variable}`}>
         <div className="site-shell">
           <header className="site-header">
             <Link className="site-name" href="/" aria-label="Juncheng Qian home">
