@@ -8,10 +8,8 @@ export const metadata: Metadata = {
 export default function CVPage() {
   return (
     <div className="cv-page">
-      <section className="cv-hero" aria-labelledby="cv-title">
+      <section className="cv-hero">
         <div className="cv-hero-inner">
-          <p className="cv-kicker">Curriculum Vitae</p>
-          <h1 id="cv-title">Juncheng Qian</h1>
           <p className="cv-role">Dwell in the green, revel in the mundane.</p>
         </div>
       </section>
