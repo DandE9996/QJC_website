@@ -48,9 +48,14 @@ create policy "Published QJC thoughts are public"
 on "QJC_website".thoughts
 for select
 to anon, authenticated
+using (status = 'published');
+
+create policy "QJC editors can read all thoughts"
+on "QJC_website".thoughts
+for select
+to authenticated
 using (
-  status = 'published'
-  or exists (
+  exists (
     select 1
     from "QJC_website".editors e
     where e.user_id = (select auth.uid())
