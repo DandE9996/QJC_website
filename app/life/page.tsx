@@ -13,8 +13,8 @@ const items = [
 
 export default function LifePage() {
   return (
-    <>
-      <header className="page-header">
+    <div className="editorial-page">
+      <header className="editorial-hero">
         <p className="eyebrow">Life</p>
         <h1>Outside work.</h1>
         <p className="page-intro">
@@ -22,16 +22,17 @@ export default function LifePage() {
         </p>
       </header>
 
-      <section className="section">
-        <div className="simple-list">
-          {items.map(([title, description]) => (
-            <div className="simple-item" key={title}>
-              <h3>{title}</h3>
+      <section className="editorial-panel" aria-label="Life notes">
+        <div className="index-list">
+          {items.map(([title, description], index) => (
+            <article className="index-row" key={title}>
+              <span className="index-number">{String(index + 1).padStart(2, "0")}</span>
+              <h2>{title}</h2>
               <p>{description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
