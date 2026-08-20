@@ -12,25 +12,26 @@ const sections = [
 
 export default function WorkPage() {
   return (
-    <>
-      <header className="page-header">
+    <div className="editorial-page">
+      <header className="editorial-hero">
         <p className="eyebrow">Work</p>
         <h1>Research and projects.</h1>
         <p className="page-intro">
-          This section will hold the professional side of the site without turning the whole website into an online résumé.
+          This section holds the professional side of the site without turning the whole website into an online résumé.
         </p>
       </header>
 
-      <section className="section">
-        <div className="simple-list">
-          {sections.map(([title, description]) => (
-            <div className="simple-item" key={title}>
-              <h3>{title}</h3>
+      <section className="editorial-panel" aria-label="Work sections">
+        <div className="index-list">
+          {sections.map(([title, description], index) => (
+            <article className="index-row" key={title}>
+              <span className="index-number">{String(index + 1).padStart(2, "0")}</span>
+              <h2>{title}</h2>
               <p>{description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
