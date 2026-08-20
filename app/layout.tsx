@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import SiteChrome from "./site-chrome";
 import "./globals.css";
 import "./ocean-theme.css";
+import "./home-layout.css";
 
 const displayFont = Cormorant_Garamond({
   subsets: ["latin"],
