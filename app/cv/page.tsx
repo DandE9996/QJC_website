@@ -12,14 +12,7 @@ export default function CVPage() {
         <div className="cv-hero-inner">
           <p className="cv-kicker">Curriculum Vitae</p>
           <h1 id="cv-title">Juncheng Qian</h1>
-          <p className="cv-role">PhD Researcher | Air Quality, Net Zero Housing, and Causal Policy Evaluation</p>
-          <div className="cv-contact" aria-label="Contact details">
-            <span>University of Birmingham, Birmingham, UK</span>
-            <a href="mailto:juncheng.qian@outlook.com">juncheng.qian@outlook.com</a>
-            <a href="https://orcid.org/0009-0002-4144-6749" target="_blank" rel="noreferrer">
-              ORCID 0009-0002-4144-6749
-            </a>
-          </div>
+          <p className="cv-role">Dwell in the green, revel in the mundane.</p>
         </div>
       </section>
 
