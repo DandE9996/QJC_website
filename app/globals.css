@@ -55,6 +55,14 @@ a {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
+  transition: transform 220ms ease, background-color 220ms ease, color 220ms ease;
+}
+
+.site-name:hover,
+.site-name:focus-visible {
+  transform: scale(1.04);
+  background: var(--text);
+  color: var(--background);
 }
 
 .site-nav {
@@ -65,12 +73,71 @@ a {
 }
 
 .site-nav a {
-  transition: color 160ms ease;
+  position: relative;
+  padding: 8px 0;
+  transition: color 220ms ease;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 1px;
+  background: var(--text);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
   color: var(--text);
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.route-transition {
+  animation: route-in 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes route-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-hero {
+  min-height: calc(100svh - 89px);
+  display: flex;
+  align-items: center;
+}
+
+.home-intro {
+  padding: 4vh 0 14vh;
+}
+
+.home-intro h1 {
+  margin-bottom: 20px;
+  font-size: clamp(64px, 11vw, 132px);
+}
+
+.home-intro p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(18px, 2.2vw, 24px);
+  letter-spacing: -0.01em;
 }
 
 .hero {
@@ -205,16 +272,6 @@ h3 {
   font-size: 14px;
 }
 
-.site-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 34px 0 48px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 13px;
-}
-
 @media (max-width: 760px) {
   .site-shell {
     width: min(calc(100% - 28px), var(--max-width));
@@ -231,6 +288,14 @@ h3 {
     justify-content: flex-end;
     gap: 10px 18px;
     max-width: 260px;
+  }
+
+  .home-hero {
+    min-height: calc(100svh - 81px);
+  }
+
+  .home-intro {
+    padding: 0 0 10vh;
   }
 
   .hero {
@@ -255,8 +320,20 @@ h3 {
   .link-row .arrow {
     display: none;
   }
+}
 
-  .site-footer {
-    flex-direction: column;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .route-transition {
+    animation: none;
+  }
+
+  .site-name,
+  .site-nav a,
+  .site-nav a::after {
+    transition: none;
   }
 }
