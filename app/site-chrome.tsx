@@ -92,7 +92,7 @@ export default function SiteChrome({ children }: Readonly<{ children: React.Reac
     const navRect = nav.getBoundingClientRect();
     const linkRect = link.getBoundingClientRect();
     setIndicator({
-      left: linkRect.left - navRect.left,
+      left: linkRect.left - navRect.left + nav.scrollLeft,
       width: linkRect.width,
       visible: true,
     });
