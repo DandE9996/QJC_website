@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
+import ThoughtsClient from "./thoughts-client";
 
 export const metadata: Metadata = {
   title: "Thoughts",
 };
-
-const topics = [
-  ["Research notes", "Short notes on methods, evidence, and questions that come up while doing research."],
-  ["Policy", "Thoughts on how environmental policy is designed, evaluated, and translated into real outcomes."],
-  ["Cities and environment", "Observations about buildings, air, infrastructure, and everyday urban life."],
-  ["Technology", "Notes on data, machine learning, AI tools, and how I use them in practice."],
-];
 
 export default function ThoughtsPage() {
   return (
@@ -22,17 +16,7 @@ export default function ThoughtsPage() {
         </p>
       </header>
 
-      <section className="editorial-panel" aria-label="Thought topics">
-        <div className="index-list">
-          {topics.map(([title, description], index) => (
-            <article className="index-row" key={title}>
-              <span className="index-number">{String(index + 1).padStart(2, "0")}</span>
-              <h2>{title}</h2>
-              <p>{description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <ThoughtsClient />
     </div>
   );
 }
