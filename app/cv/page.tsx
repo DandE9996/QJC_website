@@ -28,11 +28,10 @@ export default function CVPage() {
           <p>Profile</p>
           <nav>
             <a href="#education">Education</a>
-            <a href="#honours">Honours &amp; service</a>
             <a href="#publications">Publications</a>
-            <a href="#expertise">Technical expertise</a>
             <a href="#research">Research experience</a>
             <a href="#professional">Professional experience</a>
+            <a href="#honours">Honours &amp; service</a>
           </nav>
         </aside>
 
@@ -81,28 +80,9 @@ export default function CVPage() {
             </article>
           </section>
 
-          <section className="cv-section" id="honours">
-            <div className="cv-section-heading">
-              <span>02</span>
-              <h2>Honours &amp; Academic Service</h2>
-            </div>
-
-            <article className="cv-entry cv-award">
-              <div className="cv-entry-head">
-                <div>
-                  <p className="cv-mini-label">Award</p>
-                  <h3>Best Reviewer Award</h3>
-                  <p className="cv-place">ACM Transactions on Social Computing (TSC)</p>
-                </div>
-                <p className="cv-date">2026</p>
-              </div>
-              <p>Selected by the journal’s Award Selection Committee for exceptional, constructive, and timely peer review.</p>
-            </article>
-          </section>
-
           <section className="cv-section" id="publications">
             <div className="cv-section-heading">
-              <span>03</span>
+              <span>02</span>
               <h2>Publications</h2>
             </div>
 
@@ -151,65 +131,11 @@ export default function CVPage() {
                 </div>
               </article>
             </div>
-
-            <div className="cv-subsection-heading cv-subsection-spaced">
-              <h3>Manuscripts under review</h3>
-            </div>
-
-            <div className="cv-publications">
-              <article className="cv-publication">
-                <span className="cv-pub-number">05</span>
-                <div>
-                  <p className="cv-pub-authors"><strong>Qian, J.</strong>, Dai, Y., Bartington, S. E., Čavoški, A., Chung, C. Y., Ghaffarpasand, O., Muller, C. L., Prestwood, E., Tong, C., Wang, X., Shan, Y., Liu, B., &amp; Shi, Z. (2026).</p>
-                  <h3>Impacts of housing retrofits on indoor environmental quality and energy consumption: A review.</h3>
-                  <p className="cv-pub-journal">Indoor Air, under review.</p>
-                </div>
-              </article>
-
-              <article className="cv-publication">
-                <span className="cv-pub-number">06</span>
-                <div>
-                  <p className="cv-pub-authors">Tong, C., Dai, Y., <strong>Qian, J.</strong>, Su, Y., Shao, J., Hall, J., Yuan, J., Zhao, Y., Cole, M. A., Elliott, R. J. R., Liu, B., &amp; Shi, Z. (2026).</p>
-                  <h3>Low Emission Zones and urban air quality: Two decades of European evidence.</h3>
-                  <p className="cv-pub-journal">PNAS, under review.</p>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section className="cv-section" id="expertise">
-            <div className="cv-section-heading">
-              <span>04</span>
-              <h2>Technical Expertise</h2>
-            </div>
-
-            <div className="cv-skill-grid">
-              <article>
-                <p className="cv-mini-label">Measurement</p>
-                <h3>Air quality measurement</h3>
-                <p>Low-cost sensor networks; reference-instrument co-location and calibration; deployment and QA/QC; long-term indoor and outdoor monitoring; PM₂.₅, CO₂, temperature, relative humidity, and black carbon time series.</p>
-              </article>
-              <article>
-                <p className="cv-mini-label">Evaluation</p>
-                <h3>Causal inference and policy evaluation</h3>
-                <p>Weather normalisation; augmented synthetic control; Bayesian Structural Time Series and CausalImpact; difference-in-differences; double machine learning; Bayesian hierarchical models; matched-control and interrupted time-series designs.</p>
-              </article>
-              <article>
-                <p className="cv-mini-label">Computing</p>
-                <h3>Machine learning and computing</h3>
-                <p>Python, R, Git, and HPC workflows; random forests; automated calibration; feature engineering; cross-validation; large-scale longitudinal and high-frequency environmental data processing.</p>
-              </article>
-              <article>
-                <p className="cv-mini-label">Systems</p>
-                <h3>Spatial, policy, and equity analysis</h3>
-                <p>Linkage of environmental, traffic, housing, socioeconomic, and policy datasets; distributional analysis; remote sensing; environmental justice; and health equity.</p>
-              </article>
-            </div>
           </section>
 
           <section className="cv-section" id="research">
             <div className="cv-section-heading">
-              <span>05</span>
+              <span>03</span>
               <h2>Research Experience</h2>
             </div>
 
@@ -275,7 +201,7 @@ export default function CVPage() {
 
           <section className="cv-section" id="professional">
             <div className="cv-section-heading">
-              <span>06</span>
+              <span>04</span>
               <h2>Professional Experience</h2>
             </div>
 
@@ -317,6 +243,25 @@ export default function CVPage() {
               <ul>
                 <li>Conducted field interviews on coal-to-gas and coal-to-power policy implementation and contributed to the 2018 national dispersed-coal management report.</li>
               </ul>
+            </article>
+          </section>
+
+          <section className="cv-section" id="honours">
+            <div className="cv-section-heading">
+              <span>05</span>
+              <h2>Honours &amp; Academic Service</h2>
+            </div>
+
+            <article className="cv-entry cv-award">
+              <div className="cv-entry-head">
+                <div>
+                  <p className="cv-mini-label">Award</p>
+                  <h3>Best Reviewer Award</h3>
+                  <p className="cv-place">ACM Transactions on Social Computing (TSC)</p>
+                </div>
+                <p className="cv-date">2026</p>
+              </div>
+              <p>Selected by the journal’s Award Selection Committee for exceptional, constructive, and timely peer review.</p>
             </article>
           </section>
         </div>
