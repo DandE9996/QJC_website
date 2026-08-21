@@ -10,17 +10,35 @@ export default function CVPage() {
     <div className="cv-page">
       <style>{`
         .cv-entry-head.cv-education-head {
-          grid-template-columns: minmax(0, 1fr) 172px auto;
-          gap: 24px;
+          grid-template-columns: minmax(0, 1fr) 185px;
+          gap: 30px;
+          align-items: start;
+        }
+
+        .cv-education-head > div:first-child {
+          grid-column: 1;
+          grid-row: 1 / span 2;
+        }
+
+        .cv-education-head > .cv-date {
+          grid-column: 2;
+          grid-row: 1;
+          justify-self: end;
+          margin-top: 5px;
         }
 
         .cv-school-mark {
-          min-height: 76px;
+          grid-column: 2;
+          grid-row: 2;
+          min-height: 0;
           display: flex;
-          align-items: center;
-          justify-content: center;
-          align-self: center;
-          padding: 3px 0;
+          align-items: flex-start;
+          justify-content: flex-end;
+          justify-self: end;
+          align-self: start;
+          margin-top: 13px;
+          padding: 0;
+          background: transparent !important;
         }
 
         .cv-school-mark img {
@@ -29,31 +47,69 @@ export default function CVPage() {
           max-width: 100%;
           height: auto;
           object-fit: contain;
+          opacity: 0.46;
+          filter: grayscale(0.28) saturate(0.55) contrast(0.88);
+          mix-blend-mode: multiply;
         }
 
         .cv-school-mark-birmingham img {
-          max-width: 158px;
+          max-width: 142px;
         }
 
         .cv-school-mark-melbourne img {
-          width: 82px;
-          height: 82px;
-        }
-
-        .cv-school-mark-toronto {
-          min-height: 60px;
-          padding: 7px 10px;
-          background: #1e3765;
+          width: 70px;
+          height: 70px;
         }
 
         .cv-school-mark-toronto img {
-          max-width: 146px;
+          max-width: 148px;
         }
 
         @media (max-width: 960px) {
           .cv-entry-head.cv-education-head {
-            grid-template-columns: minmax(0, 1fr) 136px auto;
-            gap: 18px;
+            grid-template-columns: minmax(0, 1fr) 150px;
+            gap: 22px;
+          }
+
+          .cv-school-mark-birmingham img {
+            max-width: 124px;
+          }
+
+          .cv-school-mark-melbourne img {
+            width: 62px;
+            height: 62px;
+          }
+
+          .cv-school-mark-toronto img {
+            max-width: 128px;
+          }
+        }
+
+        @media (max-width: 760px) {
+          .cv-entry-head.cv-education-head {
+            grid-template-columns: 1fr;
+            gap: 7px;
+          }
+
+          .cv-education-head > div:first-child,
+          .cv-education-head > .cv-date,
+          .cv-school-mark {
+            grid-column: 1;
+            grid-row: auto;
+            justify-self: start;
+          }
+
+          .cv-education-head > .cv-date {
+            margin-top: 0;
+          }
+
+          .cv-school-mark {
+            justify-content: flex-start;
+            margin: 9px 0 3px;
+          }
+
+          .cv-school-mark img {
+            opacity: 0.43;
           }
 
           .cv-school-mark-birmingham img {
@@ -61,49 +117,12 @@ export default function CVPage() {
           }
 
           .cv-school-mark-melbourne img {
-            width: 72px;
-            height: 72px;
-          }
-
-          .cv-school-mark-toronto {
-            min-height: 54px;
-            padding: 6px 8px;
+            width: 62px;
+            height: 62px;
           }
 
           .cv-school-mark-toronto img {
-            max-width: 120px;
-          }
-        }
-
-        @media (max-width: 760px) {
-          .cv-entry-head.cv-education-head {
-            grid-template-columns: 1fr;
-            gap: 10px;
-          }
-
-          .cv-school-mark {
-            min-height: 0;
-            justify-content: flex-start;
-            margin: 3px 0 2px;
-          }
-
-          .cv-school-mark-birmingham img {
-            max-width: 132px;
-          }
-
-          .cv-school-mark-melbourne img {
-            width: 72px;
-            height: 72px;
-          }
-
-          .cv-school-mark-toronto {
-            width: fit-content;
-            min-height: 0;
-            padding: 6px 8px;
-          }
-
-          .cv-school-mark-toronto img {
-            max-width: 132px;
+            max-width: 128px;
           }
         }
       `}</style>
