@@ -15,7 +15,7 @@ export default function CVPage() {
         }
 
         .cv-school-mark {
-          min-height: 68px;
+          min-height: 76px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -36,8 +36,8 @@ export default function CVPage() {
         }
 
         .cv-school-mark-melbourne img {
-          width: 64px;
-          height: 64px;
+          width: 82px;
+          height: 82px;
         }
 
         .cv-school-mark-toronto {
@@ -61,8 +61,8 @@ export default function CVPage() {
           }
 
           .cv-school-mark-melbourne img {
-            width: 56px;
-            height: 56px;
+            width: 72px;
+            height: 72px;
           }
 
           .cv-school-mark-toronto {
@@ -92,8 +92,8 @@ export default function CVPage() {
           }
 
           .cv-school-mark-melbourne img {
-            width: 54px;
-            height: 54px;
+            width: 72px;
+            height: 72px;
           }
 
           .cv-school-mark-toronto {
@@ -164,7 +164,7 @@ export default function CVPage() {
                 </div>
                 <div className="cv-school-mark cv-school-mark-melbourne">
                   <img
-                    src="https://designsystem.web.unimelb.edu.au/static/img/logo-icon.svg"
+                    src="https://designsystem.web.unimelb.edu.au/static/img/logo.svg"
                     alt="University of Melbourne logo"
                     loading="lazy"
                     decoding="async"
