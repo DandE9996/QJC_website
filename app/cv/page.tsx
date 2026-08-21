@@ -8,6 +8,106 @@ export const metadata: Metadata = {
 export default function CVPage() {
   return (
     <div className="cv-page">
+      <style>{`
+        .cv-entry-head.cv-education-head {
+          grid-template-columns: minmax(0, 1fr) 172px auto;
+          gap: 24px;
+        }
+
+        .cv-school-mark {
+          min-height: 68px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          align-self: center;
+          padding: 3px 0;
+        }
+
+        .cv-school-mark img {
+          display: block;
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+
+        .cv-school-mark-birmingham img {
+          max-width: 158px;
+        }
+
+        .cv-school-mark-melbourne img {
+          width: 64px;
+          height: 64px;
+        }
+
+        .cv-school-mark-toronto {
+          min-height: 60px;
+          padding: 7px 10px;
+          background: #1e3765;
+        }
+
+        .cv-school-mark-toronto img {
+          max-width: 146px;
+        }
+
+        @media (max-width: 960px) {
+          .cv-entry-head.cv-education-head {
+            grid-template-columns: minmax(0, 1fr) 136px auto;
+            gap: 18px;
+          }
+
+          .cv-school-mark-birmingham img {
+            max-width: 126px;
+          }
+
+          .cv-school-mark-melbourne img {
+            width: 56px;
+            height: 56px;
+          }
+
+          .cv-school-mark-toronto {
+            min-height: 54px;
+            padding: 6px 8px;
+          }
+
+          .cv-school-mark-toronto img {
+            max-width: 120px;
+          }
+        }
+
+        @media (max-width: 760px) {
+          .cv-entry-head.cv-education-head {
+            grid-template-columns: 1fr;
+            gap: 10px;
+          }
+
+          .cv-school-mark {
+            min-height: 0;
+            justify-content: flex-start;
+            margin: 3px 0 2px;
+          }
+
+          .cv-school-mark-birmingham img {
+            max-width: 132px;
+          }
+
+          .cv-school-mark-melbourne img {
+            width: 54px;
+            height: 54px;
+          }
+
+          .cv-school-mark-toronto {
+            width: fit-content;
+            min-height: 0;
+            padding: 6px 8px;
+          }
+
+          .cv-school-mark-toronto img {
+            max-width: 132px;
+          }
+        }
+      `}</style>
+
       <section className="cv-hero">
         <div className="cv-hero-inner">
           <p className="cv-role">Dwell in the green, revel in the mundane.</p>
@@ -34,12 +134,20 @@ export default function CVPage() {
             </div>
 
             <article className="cv-entry">
-              <div className="cv-entry-head">
+              <div className="cv-entry-head cv-education-head">
                 <div>
                   <h3>Doctor of Philosophy (PhD)</h3>
                   <p className="cv-place">University of Birmingham, UK</p>
                 </div>
-                <p className="cv-date">Sep 2023 – Sep 2027 (expected)</p>
+                <div className="cv-school-mark cv-school-mark-birmingham">
+                  <img
+                    src="https://brand.birmingham.ac.uk/wp-content/uploads/2024/01/2.-Positive-University-of-Birmingham-logo-on-white-background.jpg"
+                    alt="University of Birmingham logo"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <p className="cv-date">Sep 2023 – Sep 2027</p>
               </div>
               <p className="cv-meta">School of Geography, Earth and Environmental Sciences</p>
               <p className="cv-meta">Supervisors: Prof. Zongbo Shi, Prof. Yuli Shan, and Dr Bowen Liu</p>
@@ -49,10 +157,18 @@ export default function CVPage() {
             </article>
 
             <article className="cv-entry">
-              <div className="cv-entry-head">
+              <div className="cv-entry-head cv-education-head">
                 <div>
                   <h3>Master of Environmental Science</h3>
                   <p className="cv-place">University of Melbourne, Australia</p>
+                </div>
+                <div className="cv-school-mark cv-school-mark-melbourne">
+                  <img
+                    src="https://designsystem.web.unimelb.edu.au/static/img/logo-icon.svg"
+                    alt="University of Melbourne logo"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <p className="cv-date">Jul 2021 – Jun 2023</p>
               </div>
@@ -60,10 +176,18 @@ export default function CVPage() {
             </article>
 
             <article className="cv-entry">
-              <div className="cv-entry-head">
+              <div className="cv-entry-head cv-education-head">
                 <div>
                   <h3>Honours Bachelor of Science</h3>
                   <p className="cv-place">University of Toronto, Canada</p>
+                </div>
+                <div className="cv-school-mark cv-school-mark-toronto">
+                  <img
+                    src="https://www.registrar.utoronto.ca/wp-content/uploads/2025/04/U-of-T-logo-1.svg"
+                    alt="University of Toronto logo"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <p className="cv-date">Sep 2017 – Jun 2021</p>
               </div>
